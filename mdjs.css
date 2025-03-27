@@ -1,0 +1,125 @@
+:root {
+	--mdjs-fg: #f0f6fc;
+	--mdjs-fg-muted: #9198a1;
+	--mdjs-bg: #0d1116;
+	--mdjs-bg-muted: #151b23;
+	--mdjs-link: #79c0ff;
+	--mdjs-link-muted: #1f6feb;
+}
+
+.mdjs {
+	background-color: var(--mdjs-bg);
+	color: var(--mdjs-fg);
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 1rem;
+	padding: 1rem;
+	box-sizing: border-box;
+	width: 100%;
+	min-height: 100%;
+	
+	article {
+		width: 100%;
+		max-width: 60ch;
+		margin-inline: auto;
+		box-sizing: border-box;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		color: var(--mdjs-fg);
+		font-weight: 600;
+		line-height: 1.25;
+	}
+	h1 {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+		margin-top: 0.75rem;
+	}
+	h2 {
+		font-size: 2.5rem;
+		margin-bottom: 0.75rem;
+		margin-top: 0.6rem;
+	}
+	h3 {
+		font-size: 2.25rem;
+		margin-bottom: 0.5rem;
+		margin-top: 0.5rem;
+	}
+	h4 {
+		font-size: 1.75rem;
+		margin-bottom: 0.5rem;
+		margin-top: 0.4rem;
+	}
+	h5 {
+		font-size: 1.5rem;
+		margin-bottom: 0.5rem;
+		margin-top: 0.4rem;
+	}
+	h6 {
+		font-size: 1rem;
+		margin-bottom: 0.5rem;
+		margin-top: 0.4rem;
+	}
+
+	a {
+		color: var(--mdjs-link);
+      text-decoration: none;
+
+      &:hover {
+         color: var(--mdjs-link-muted);
+      }
+	}
+
+	hr {
+		border: 0;
+      border-top: 1px solid var(--mdjs-fg-muted);
+      margin-bottom: 1rem;
+      margin-top: 1.5rem;
+	}
+
+	blockquote {
+		border-left: 4px solid var(--mdjs-fg-muted);
+		padding-left: 1rem;
+		
+		&.mdjs-subquote {
+			padding-left: 0.5rem;
+		}
+	}
+
+	ul {
+		list-style-type: disc;
+      margin-bottom: 1rem;
+      margin-top: 0.5rem;
+		padding-left: 1.5rem;
+	}
+
+	ol {
+		list-style-type: decimal;
+      margin-bottom: 1rem;
+      margin-top: 0.5rem;
+		padding-left: 1.5rem;
+	}
+
+	li {
+		margin-bottom: 0.5rem;
+	}
+
+	code {
+		font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+		tab-size: 4ch;
+
+		pre, span {
+			overflow-x: scroll;
+			background-color: var(--mdjs-bg-muted);
+			padding: 0.25rem 0.5rem;
+			border-radius: 3px;
+			margin-top: 1rem;
+			margin-bottom: 0;
+		}
+	}
+
+	img {
+		max-width: 100%;
+      border-radius: 3px;
+      margin-block: 1rem;
+	}
+}
