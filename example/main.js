@@ -1,6 +1,6 @@
 async function loadPage(id) {
 	const parser = new MarkdownParser();
-	await parser.loadMarkdownFromURL(id + ".md");
+	await parser.loadMarkdownFromURL(id);
 	document.getElementById("content").innerHTML += parser.getHTML();
 	if(document.getElementById("content").childNodes.length > 1)
 	{
@@ -18,7 +18,7 @@ async function loadPage(id) {
 
 async function loadPopup(id) {
 	const parser = new MarkdownParser();
-	await parser.loadMarkdownFromURL(id + ".md");
+	await parser.loadMarkdownFromURL(id);
 	const popup = document.createElement("dialog");
 	popup.innerHTML = parser.getHTML();
 	popup.popover = "auto";
