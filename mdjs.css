@@ -5,12 +5,14 @@
 	--mdjs-bg-muted: #151b23;
 	--mdjs-link: #79c0ff;
 	--mdjs-link-muted: #1f6feb;
+	--mdjs-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	--mdjs-font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
 }
 
 .mdjs {
 	background-color: var(--mdjs-bg);
 	color: var(--mdjs-fg);
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-family: var(--mdjs-font);
 	font-size: 1rem;
 	padding: 1rem;
 	box-sizing: border-box;
@@ -62,18 +64,18 @@
 
 	a {
 		color: var(--mdjs-link);
-      text-decoration: none;
+		text-decoration: none;
 
-      &:hover {
-         color: var(--mdjs-link-muted);
-      }
+		&:hover {
+			color: var(--mdjs-link-muted);
+		}
 	}
 
 	hr {
 		border: 0;
-      border-top: 1px solid var(--mdjs-fg-muted);
-      margin-bottom: 1rem;
-      margin-top: 1.5rem;
+		border-top: 1px solid var(--mdjs-fg-muted);
+		margin-bottom: 1rem;
+		margin-top: 1.5rem;
 	}
 
 	blockquote {
@@ -87,15 +89,15 @@
 
 	ul {
 		list-style-type: disc;
-      margin-bottom: 1rem;
-      margin-top: 0.5rem;
+		margin-bottom: 1rem;
+		margin-top: 0.5rem;
 		padding-left: 1.5rem;
 	}
 
 	ol {
 		list-style-type: decimal;
-      margin-bottom: 1rem;
-      margin-top: 0.5rem;
+		margin-bottom: 1rem;
+		margin-top: 0.5rem;
 		padding-left: 1.5rem;
 	}
 
@@ -104,7 +106,7 @@
 	}
 
 	code {
-		font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+		font-family: var(--mdjs-font-mono);
 		tab-size: 4ch;
 
 		pre, span {
@@ -119,7 +121,7 @@
 
 	img {
 		max-width: 100%;
-      border-radius: 3px;
-      margin-block: 1rem;
+		border-radius: 3px;
+		margin-block: 1rem;
 	}
 }

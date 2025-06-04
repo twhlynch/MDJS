@@ -106,6 +106,6 @@ dialog > .mdjs {
 	100% { opacity: 0; }
 }
 @keyframes popup {
-   0% { scale: 0; }
-   100% { scale: 1; }
+	0% { scale: 0; }
+	100% { scale: 1; }
 }

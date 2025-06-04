@@ -54,10 +54,10 @@ class MarkdownParser {
 	];
 
 	constructor() {
-      this.markdown = this.#fallbackMarkdown;
+		this.markdown = this.#fallbackMarkdown;
 		this.html = this.#prefixHTML + this.#suffixHTML;
 		this.metadata = this.#fallbackMetadata;
-   }
+	}
 
 	/**
 	 * @param {string} url
@@ -120,17 +120,17 @@ class MarkdownParser {
     */
 	extractMetadata() {
 		const metadataRegex = /^---\s*\n([\s\S]*?)\n---\s*\n/m;
-      const match = this.markdown.match(metadataRegex);
-      if (match) {
-         const lines = match[1].trim().split("\n");
-         lines.forEach(line => {
-            const [key, value] = line.split(":").map(s => s.trim());
-            this.metadata[key] = value;
-         });
-			this.markdown = this.markdown.replace(match[0], "").trim();
-      } else {
-         this.metadata = this.#fallbackMetadata;
-      }
+		const match = this.markdown.match(metadataRegex);
+		if (match) {
+			const lines = match[1].trim().split("\n");
+			lines.forEach(line => {
+				const [key, value] = line.split(":").map(s => s.trim());
+				this.metadata[key] = value;
+			});
+				this.markdown = this.markdown.replace(match[0], "").trim();
+		} else {
+			this.metadata = this.#fallbackMetadata;
+		}
 	}
 
 	/** @description override default markdown for errors */
@@ -145,7 +145,7 @@ class MarkdownParser {
 
 	/** @returns parsed metadata */
 	getMetadata() {
-      return this.metadata;
-   }
+		return this.metadata;
+	}
 
 }
